@@ -1,13 +1,17 @@
-// const means that it cannot be updated
-// This line creates the division for the gridbox
-const gridbox = document.createElement("div");
+const container = document.getElementById("main-container");
 
-// This calls for the CSS of the gridbox
-gridbox.innerHTML = "Hello";
-gridbox.style.width = "50px";
-gridbox.style.height = "50px";
-gridbox.style.background = "red";
-gridbox.style.color = "white";
+for (let i = 0; i < 256; i++) {
+    // const means that it cannot be updated
+    // This line creates the division for the gridbox
+    const gridbox = document.createElement("div");
 
-// When something has the ID, "main", we will add the gridbox element to the document
-document.getElementById("main").appendChild(gridbox);
+    // This calls for the CSS of the gridbox
+    gridbox.innerHTML = "Box";
+    gridbox.style.textAlign = "center";
+    gridbox.style.width = "40px";
+    gridbox.style.height = "40px";
+    gridbox.style.background = 'rgb(255, 127, 127)';
+    gridbox.style.color = "white";
+
+    container.appendChild(gridbox);
+}

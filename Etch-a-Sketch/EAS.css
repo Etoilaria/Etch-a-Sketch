@@ -1,0 +1,14 @@
+.grid-container {
+    height: 640px;
+    width: 640px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gridbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px; 
+}
