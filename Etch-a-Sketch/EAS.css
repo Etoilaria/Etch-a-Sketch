@@ -7,8 +7,16 @@
 }
 
 .gridbox {
+    background-color: rgb(255, 127, 127);
+    width: 40px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 50px; 
+    color: white;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.gridbox:hover {
+    background-color: rgb(255, 192, 192); /* Lighter shade on hover */
 }
