@@ -13,10 +13,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: aliceblue;
     transition: background-color 0.3s ease; /* Smooth transition */
 }
 
 .gridbox:hover {
     background-color: rgb(255, 192, 192); /* Lighter shade on hover */
+}
+
+.grid-size {
+    border: none;
+    background-color: rgb(255, 127, 127);
+    color: aliceblue;
+    padding: 15px;
+    margin: 15px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.grid-size:hover {
+    background-color: rgb(255, 192, 192);
 }
