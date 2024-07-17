@@ -1,3 +1,12 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
 .grid-container {
     height: 640px;
     width: 640px;
@@ -8,13 +17,13 @@
 
 .gridbox {
     background-color: rgb(255, 127, 127);
-    width: 40px;
-    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: aliceblue;
     transition: background-color 0.3s ease; /* Smooth transition */
+    border: 1px solid rgb(255, 255, 255); /* Added border */
+    box-sizing: border-box;  /* Ensures padding and border are included in the element's total width and height */
 }
 
 .gridbox:hover {

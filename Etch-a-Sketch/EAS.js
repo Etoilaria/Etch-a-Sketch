@@ -1,30 +1,34 @@
-//Function for user input on grid size
+// Function for user input on grid size
 function Gridsize() {
-    var size = prompt("Choose a number from 1-100:")
-    var isNum = !isNaN(Number(size))
-    var isBoundary = size >= 1 && size <= 100
-    if (isNum) {
-        if (isBoundary) {
-            alert("Changing grid size...")
-        }
-        else {
-            alert("You didn't enter a number from 1-100")
-        }
-    }
-    else {
-        alert("You didn't enter a valid number")
+    var size = prompt("Choose a number from 1-100:");
+    var isNum = !isNaN(Number(size));
+    var isBoundary = size >= 1 && size <= 100;
+    if (isNum && isBoundary) {
+        alert("Changing grid size...");
+        createGrid(size);
+    } else {
+        alert("You didn't enter a valid number from 1-100");
+        Gridsize();
     }
 }
-// Function to create grid //
-document.addEventListener("DOMContentLoaded", function() {
-    const container = document.getElementById("main-container");
 
-    for (let i = 0; i < 256; i++) {
+// Function to create grid
+function createGrid(size) {
+    const container = document.getElementById("gridContainer");
+    container.innerHTML = ''; // Clear the existing grid
+
+    const gridSize = 640; // Total grid container size in pixels
+    const boxSize = gridSize / size; // Calculate box size based on grid size
+
+    for (let i = 0; i < size * size; i++) {
         const gridbox = document.createElement("div");
-        gridbox.innerHTML = "Box";
-        gridbox.style.color = "white";
         gridbox.classList.add("gridbox");
-
+        gridbox.style.width = `${boxSize}px`;
+        gridbox.style.height = `${boxSize}px`;
         container.appendChild(gridbox);
     }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    createGrid(16); // Initial grid size
 });
